@@ -83,7 +83,7 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
 **Fluxograma**
 
 **Diagrama de Uso**
-![Diagrama De Uso](img/diauso.png)
+![Diagrama De Uso](img/diauso.PNG)
 
 **Diagrama de Classes**
 
