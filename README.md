@@ -1,6 +1,6 @@
 # ReactNode
 
-## **Sistema de Gestão de Eventos em Node**
+## **Sistema de Gestão Flow**
 
 ### **Contexto do Projeto**
 "O Sistema de Gestão de Eventos é uma aplicação prática voltada para o gerenciamento eficiente de eventos, aplicável a uma variedade de contextos, como pequenos eventos comunitários, conferências empresariais ou festivais de grande porte. Este projeto visa permitir a organização de eventos, com funcionalidades que englobam cadastro de participantes, gerenciamento de inscrições, notificações e avaliações pós-evento. Ele oferece a oportunidade de aplicar tecnologias modernas como **Node.js** para o backend, **React** no frontend, **MongoDB** para persistência de dados, além de autenticação e segurança com **JWT**."
@@ -8,6 +8,8 @@
 ---
 
 ## **Escopo do Projeto**
+
+Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organizadores criar, promover e gerenciar eventos de forma eficiente e intuitiva. A solução oferece funcionalidades para cadastro de usuários, criação e gerenciamento de eventos, inscrições e pagamentos, além de notificações e feedback dos participantes. Com uma interface moderna e fácil de usar, visando transformar a organização de eventos em uma experiência fluida e sem complicações.
 
 ### **Objetivos Gerais**
 - Construir uma plataforma de gerenciamento de eventos que permita a criação, inscrição e avaliação de eventos de maneira eficiente.
