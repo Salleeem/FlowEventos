@@ -78,6 +78,16 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
 
 ---
 
+## **Desenvolvimento**
+
+**Fluxograma**
+
+**Diagrama de Uso**
+
+**Diagrama de Classes**
+
+---
+
 ## **Cronograma**
 
 
