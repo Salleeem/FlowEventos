@@ -80,6 +80,7 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
 
 ## **Desenvolvimento**
 
+
 **Fluxograma**
 ![Diagrama de Fluxos](img/Cap.PNG)
 
@@ -113,7 +114,7 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
 
 ---
 
-### **Prototipagem da Dashboard de Usuários
+### **Prototipagem da Dashboard de Usuários**
 
 
 **Baixa Fidelidade**
