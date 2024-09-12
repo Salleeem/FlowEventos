@@ -94,6 +94,7 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
 
 ## **Cronograma**
 
+![Cronograma](img/cronograma.PNG)
 
 ---
 
