@@ -81,7 +81,7 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
 ## **Desenvolvimento**
 
 **Fluxograma**
-![Diagrama de Fluxos](img/diafluxocer.PNG)
+![Diagrama de Fluxos](img/Cap.PNG)
 
 **Diagrama de Uso**
 ![Diagrama De Uso](img/diauso.PNG)
