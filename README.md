@@ -49,7 +49,7 @@ Desenvilver uma plataforma inovadora de gestão de eventos que permite aos organ
     - Implementação das principais funcionalidades: cadastro de eventos, sistema de autenticação JWT, inscrição de participantes.
     - Integração completa entre frontend e backend.
     - Início dos testes de unidade e integração.
-- **Fase 3 (Mês 5 a 6)**: 
+- **Fase 3 (Mês 5)**: 
     - Implementação de funcionalidades avançadas: notificações, sistema de avaliações, favoritos.
     - Testes de carga e otimizações de performance.
     - Lançamento da versão MVP e ajustes pós-lançamento.
