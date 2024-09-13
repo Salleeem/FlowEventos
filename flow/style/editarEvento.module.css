@@ -1,0 +1,39 @@
+/* styles/editar-eventos/editarEvento.module.css */
+
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 20px;
+  color: red;
+}
