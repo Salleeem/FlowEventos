@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import styles from '@/style/orgDash.module.css'; // Importe o CSS
+import styles from '@/style/orgDash.module.css'; 
 
 export default function DashboardOrganizador() {
   const [eventos, setEventos] = useState([]);

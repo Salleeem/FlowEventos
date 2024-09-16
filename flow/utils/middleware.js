@@ -10,7 +10,7 @@ export const jwtMiddleware = (handler) => async (req, res) => {
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET); // Verifica o token
         req.user = decoded; // Armazena os dados do usuário no request
-        return handler(req, res); // Continua para o próximo handler
+        return handler(req, res); 
     } catch (error) {
         return res.status(401).json({ message: 'Token inválido' });
     }
