@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import styles from '@/style/orgDash.module.css'; // Importe o CSS
 
 export default function DashboardOrganizador() {
   const [eventos, setEventos] = useState([]);
@@ -62,37 +63,50 @@ export default function DashboardOrganizador() {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Bem-vindo, Organizador!</h1>
-      <button onClick={handleCadastrarEvento}>Cadastrar Evento</button>
-      <button onClick={handleLogout} style={{ marginLeft: '10px' }}>Sair</button>
+    <div className={styles.page}>
+      <button onClick={() => router.push('/')} className={styles.backButton}>
+        Voltar para Home
+      </button>
+      <div className={styles.formContainer}>
+        <h1>Bem-vindo, Organizador!</h1>
+        <button onClick={handleCadastrarEvento} className={styles.submitButton}>
+          Cadastrar Evento
+        </button>
+        <button onClick={handleLogout} className={styles.submitButton} style={{ marginLeft: '10px' }}>
+          Sair
+        </button>
 
-      <h2>Meus Eventos</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr>
-            <th>Título</th>
-            <th>Descrição</th>
-            <th>Data de Início</th>
-            <th>Capacidade</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          {eventos.map(evento => (
-            <tr key={evento._id}>
-              <td>{evento.titulo}</td>
-              <td>{evento.descricao}</td>
-              <td>{new Date(evento.dataInicio).toLocaleDateString()}</td>
-              <td>{evento.capacidade}</td>
-              <td>
-                <button onClick={() => handleEditEvento(evento._id)}>Editar</button>
-                <button onClick={() => handleDeleteEvento(evento._id)}>Excluir</button>
-              </td>
+        <h2>Eventos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Descrição</th>
+              <th>Data de Início</th>
+              <th>Capacidade</th>
+              <th>Ações</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {eventos.map(evento => (
+              <tr key={evento._id}>
+                <td>{evento.titulo}</td>
+                <td>{evento.descricao}</td>
+                <td>{new Date(evento.dataInicio).toLocaleDateString()}</td>
+                <td>{evento.capacidade}</td>
+                <td>
+                  <button onClick={() => handleEditEvento(evento._id)} className={styles.submitButton}>
+                    Editar
+                  </button>
+                  <button onClick={() => handleDeleteEvento(evento._id)} className={styles.submitButton}>
+                    Excluir
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import styles from '@/style/register.module.css'; // Importando o CSS
 
 export default function Register() {
     const [name, setName] = useState('');
@@ -30,8 +31,17 @@ export default function Register() {
     };
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f4f4f4' }}>
-            <div style={{ background: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)', width: '300px', textAlign: 'center' }}>
+        <div className={styles.page}>
+            {/* Botão para voltar à Home */}
+            <button 
+                onClick={() => router.push('/')} 
+                className={styles.backButton} // Atualizado para o nome correto da classe
+            >
+                Voltar para Home
+            </button>
+
+            {/* Container do formulário */}
+            <div className={styles.formContainer}>
                 <h2>Cadastro de Usuário</h2>
                 <form onSubmit={handleRegister}>
                     <input
@@ -40,7 +50,7 @@ export default function Register() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+                        className={styles.input}
                     />
                     <input
                         type="email"
@@ -48,7 +58,7 @@ export default function Register() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+                        className={styles.input}
                     />
                     <input
                         type="password"
@@ -56,24 +66,24 @@ export default function Register() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+                        className={styles.input}
                     />
                     <select
                         value={role}
                         onChange={(e) => setRole(e.target.value)}
-                        style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+                        className={styles.select}
                     >
                         <option value="participante">Participante</option>
                         <option value="organizador">Organizador</option>
                     </select>
                     <button
                         type="submit"
-                        style={{ width: '100%', padding: '10px', backgroundColor: '#007BFF', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+                        className={styles.submitButton}
                     >
                         Cadastrar
                     </button>
                 </form>
-                {message && <p>{message}</p>}
+                {message && <p className={styles.message}>{message}</p>}
             </div>
         </div>
     );

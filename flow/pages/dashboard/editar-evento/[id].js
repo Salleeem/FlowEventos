@@ -70,10 +70,16 @@ export default function EditarEvento() {
     }
   };
 
+  const handleBack = () => {
+    router.push('/dashboard/organizador'); // Redireciona de volta para a dashboard
+  };
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Editar Evento</h1>
+      <button onClick={handleBack} className={styles.backButton}>Voltar à Dashboard</button>
+      
       <form className={styles.form} onSubmit={handleUpdate}>
+      <h1 className={styles.title}>Editar Evento</h1>
         <input
           type="text"
           placeholder="Título"

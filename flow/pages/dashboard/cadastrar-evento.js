@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import styles from '@/style/CadEvento.module.css'; // Adicione o caminho correto para o arquivo CSS
 
 export default function CadastrarEvento() {
   const [titulo, setTitulo] = useState('');
@@ -33,9 +34,14 @@ export default function CadastrarEvento() {
     }
   };
 
+  const handleBack = () => {
+    router.push('/dashboard/organizador'); // Redireciona de volta para a dashboard
+  };
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f4f4f4' }}>
-      <div style={{ background: '#fff', padding: '20px', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)', width: '300px', textAlign: 'center' }}>
+    <div className={styles.page}>
+      <div className={styles.formContainer}>
+        <button onClick={handleBack} className={styles.backButton}>Voltar à Dashboard</button>
         <h2>Cadastrar Evento</h2>
         <form onSubmit={handleCadastrar}>
           <input
@@ -44,21 +50,21 @@ export default function CadastrarEvento() {
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
             required
-            style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+            className={styles.input}
           />
           <textarea
             placeholder="Descrição"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
             required
-            style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+            className={styles.textarea}
           />
           <input
             type="datetime-local"
             value={dataInicio}
             onChange={(e) => setDataInicio(e.target.value)}
             required
-            style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+            className={styles.datetime}
           />
           <input
             type="number"
@@ -66,16 +72,16 @@ export default function CadastrarEvento() {
             value={capacidade}
             onChange={(e) => setCapacidade(e.target.value)}
             required
-            style={{ width: '100%', padding: '10px', margin: '10px 0', border: '1px solid #ddd', borderRadius: '4px' }}
+            className={styles.number}
           />
           <button
             type="submit"
-            style={{ width: '100%', padding: '10px', backgroundColor: '#007BFF', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
+            className={styles.submitButton}
           >
             Cadastrar
           </button>
         </form>
-        {message && <p>{message}</p>}
+        {message && <p className={styles.message}>{message}</p>}
       </div>
     </div>
   );

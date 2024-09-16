@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import styles from '@/style/login.module.css'; // Importando o CSS
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -36,23 +37,42 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
-      {message && <p>{message}</p>}
+    <div className={styles.page}>
+      {/* Botão para voltar à Home */}
+      <button 
+        onClick={() => router.push('/')} 
+        className={styles.backButton}
+      >
+        Voltar para Home
+      </button>
+
+      {/* Container do formulário */}
+      <div className={styles.formContainer}>
+        <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={styles.input}
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className={styles.input}
+          />
+          <button
+            type="submit"
+            className={styles.submitButton}
+          >
+            Login
+          </button>
+        </form>
+        {message && <p className={styles.message}>{message}</p>}
+      </div>
     </div>
   );
 }
